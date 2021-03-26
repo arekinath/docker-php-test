@@ -15,7 +15,7 @@ RUN mysqld --console --init-file=/data/init.sql --socket=/tmp/mysql.sock & \
     pkill mysqld
 RUN systemctl enable php7.4-fpm && \
     systemctl enable mysql && \
-    systemctl enable nginx &&
+    systemctl enable nginx && \
     systemctl mask console-getty && \
     systemctl mask systemd-logind && \
     systemctl mask systemd-vconsole-setup
